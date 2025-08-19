@@ -40,7 +40,11 @@ const ContactSection = ({ isDark = true }) => {
             </div>
 
             {/* ✅ Formspree Contact Form */}
-            <div className="space-y-4 md:space-y-6">
+            <form
+              action="https://formspree.io/f/myzpqgzw"  // ← replace with your actual Formspree ID
+              method="POST"
+              className="space-y-6"
+            >
               <div className="relative">
                 <input
                   type="text"
@@ -49,7 +53,7 @@ const ContactSection = ({ isDark = true }) => {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
-                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-3 md:py-4 px-3 md:px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200 text-sm sm:text-base`}
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200`}
                 />
               </div>
 
@@ -61,7 +65,7 @@ const ContactSection = ({ isDark = true }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-3 md:py-4 px-3 md:px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200 text-sm sm:text-base`}
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200`}
                 />
               </div>
 
@@ -69,24 +73,24 @@ const ContactSection = ({ isDark = true }) => {
                 <textarea
                   name="message"
                   placeholder="Your Message"
-                  rows={4}
+                  rows={5}
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-3 md:py-4 px-3 md:px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none resize-none transition-all duration-200 text-sm sm:text-base`}
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none resize-none transition-all duration-200`}
                 />
               </div>
 
               <button
-                onClick={handleSubmit}
-                className="w-full bg-teal-500 relative hover:bg-teal-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 group text-sm sm:text-base"
+                type="submit"
+                className="w-full bg-teal-500 relative hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 group"
               >
-                <Send size={16} className="sm:hidden group-hover:translate-x-1 transition-transform" />
-                <Send size={18} className="hidden sm:block group-hover:translate-x-1 transition-transform" />
+                <Send size={18} className="group-hover:translate-x-1 transition-transform" />
                 Send Message
               </button>
-            </div>
-          </div>
+            </form>
+             </div>
+
 
           {/* Right side - Contact Info */}
           <div className="space-y-4 md:space-y-6">
@@ -131,6 +135,9 @@ const ContactSection = ({ isDark = true }) => {
                 <div className="flex items-center space-x-3 md:space-x-4">
                   <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-100'} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-500'} rounded`}></div>
+                  </div>
+                  <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-50'} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                    <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-600'} rounded`}></div>
                   </div>
                   <div className="flex-1 text-left min-w-0">
                     <h4 className={`text-base md:text-lg font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h4>
