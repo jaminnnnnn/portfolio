@@ -12,19 +12,23 @@ export const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 ">
                     <h3 className="text-2xl font-semibold">
-                        Web Developer and 
+                        Web Developer & Computer Engineering Graduate
                     </h3>
                 <p className="text-muted-foreground">
-                            With over 3 billion money debt
+                            I am Jaminli M. Peralta 
+                            
                 </p>
                 <p className="text-muted-foreground">
-                            I am a good guy
+                          A Computer Engineering graduate with hands-on experience in web development, 
+                            backend systems, and real-time applications.
                 </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                         <a href = "#contact" className="cosmic-button"> 
                        Get in Touch
                         </a>
-                         <a href = "#" className="px-6 py-1 rounded-full border border-teal-500 text-teal-400 hover:bg-teal-500/10 transition-colors duration-300"> 
+                         <a href = "documents/Peralta_Jaminli_M-Resume_Software_Developer.pdf" 
+                         download="Jaminli_Peralta_Resume.pdf"  
+                         className="px-6 py-1 rounded-full border border-teal-500 text-teal-400 hover:bg-teal-500/10 transition-colors duration-300"> 
                         Download CV
                         </a>
                     </div>
@@ -39,7 +43,7 @@ export const AboutSection = () => {
                             <div className="text-left">
                                 <h4 className="font-semibold text-lg">Web Development </h4>
                                 <p className="text-muted-foreground">
-                                    Creating bad websites
+                                    Building responsive and user-friendly web applications
                                 </p>
                             </div>
                         </div>
@@ -52,7 +56,7 @@ export const AboutSection = () => {
                              <div className="text-left">
                                 <h4 className="font-semibold text-lg">BackEnd Developer </h4>
                                 <p className="text-muted-foreground">
-                                    Developing scalable shits
+                                    Designing scalable APIs and managing databases
                                 </p>
                             </div>
                         </div>
@@ -65,7 +69,7 @@ export const AboutSection = () => {
                              <div className="text-left">
                                 <h4 className="font-semibold text-lg">Project management</h4>
                                 <p className="text-muted-foreground">
-                                   Leading the team for worst future
+                                   Led a team during thesis development and internship projects”
                                 </p>
                             </div>
                         </div>

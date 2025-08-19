@@ -9,17 +9,26 @@ export const HeroSection = () => {
                 <div className="space-y-6 ">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight ">
                         <span className="opacity-0 animate-fade-in"> I'm ,</span>
-                        <span className="text-teal-600 opacity-0 animate-fade-in-delay-1">Jaminli</span>
+                        <span className="text-teal-400 opacity-0 animate-fade-in-delay-1">Jaminli</span>
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-1">M. Peralta</span>
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        A nonchalant and handsome man
+                      I’m Jaminli M. Peralta  
+                      A Computer Engineering Graduate & Software Developer  
+                      Specialized in Web Development, and Backend Solutions  
+
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                         <a href='#projects' className="cosmic-button">
                             View my Work
+
                         </a>
+                        <a href='#contact' className="px-7 py-2 rounded-full border border-teal-500 text-teal-400 hover:bg-teal-500/10 transition-colors duration-300">
+                            Contact Me
+                        </a>
+                        
                     </div>
+                    
                 </div>
             </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
