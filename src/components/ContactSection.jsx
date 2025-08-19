@@ -132,9 +132,6 @@ const ContactSection = ({ isDark = true }) => {
                   <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-100'} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-500'} rounded`}></div>
                   </div>
-                  <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-50'} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-600'} rounded`}></div>
-                  </div>
                   <div className="flex-1 text-left min-w-0">
                     <h4 className={`text-base md:text-lg font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h4>
                     <p className={`text-xs md:text-sm mb-3 md:mb-4 ${isDark ? 'text-white' : 'text-gray-600'}`}>Follow me on social media</p>

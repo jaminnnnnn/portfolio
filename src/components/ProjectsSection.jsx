@@ -57,9 +57,9 @@ export default function ProjectSection() {
   return (
     <section id="projects" className="py-24 px-4">
   {/* Section Title */}
-  <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold text-center mb-16">
-    My<span className="text-teal-500"> Projects</span>
-  </h2>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16">
+  My<span className="text-teal-500"> Projects</span>
+</h2>
 
   {/* Responsive Layout */}
   <div className="flex flex-col items-center">

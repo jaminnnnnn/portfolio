@@ -27,9 +27,9 @@ export const SkillSection = () =>{
 
     return <section id ="skills" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3l md:text-4xl font-bold text-center">
-              My  <span className="text-teal-500">Skills</span>
-            </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+                    My <span className="text-teal-500">Skills</span>
+                </h2>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category, key) => (
