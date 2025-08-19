@@ -18,7 +18,7 @@ export const HeroSection = () => {
                       Specialized in Web Development, and Backend Solutions  
 
                     </p>
-                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                    <div className="flex flex-wrap justify-center gap-4 mt-4 pt-4 opacity-0 animate-fade-in-delay-4">
                         <a href='#projects' className="cosmic-button">
                             View my Work
 
