@@ -141,6 +141,7 @@ const ContactSection = ({ isDark = true }) => {
               </div>
 
               <button
+                aria-label="Send message"
                 type="submit"
                 className="w-full bg-teal-500 relative hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 group"
               >

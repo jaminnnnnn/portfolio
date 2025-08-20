@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { Mail, MapPin, Facebook, Instagram, Send, Linkedin, Github } from 'lucide-react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { cn } from "../lib/utils";
 
 // ===== OPTIMIZED SKILLS SECTION =====
