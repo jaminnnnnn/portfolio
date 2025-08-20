@@ -1,4 +1,4 @@
-import{cn } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -16,12 +16,12 @@ export const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10) // Fixed: scrollY instead of screenY
+            setIsScrolled(window.scrollY > 10);
         }
 
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <nav className={cn("fixed top-0 left-0 w-full z-40 transition-all duration-300",
@@ -37,30 +37,26 @@ export const Navbar = () => {
                     </span>
                 </a>
                 
-                {/*desktop nav*/}
-                <div className='hidden md:flex space-x-10'>
+                {/* Desktop nav - Added margin-right to prevent overlap with your theme toggle */}
+                <div className='hidden md:flex space-x-12 mr-16'>
                     {navItems.map((item, key) => (
                         <a key={key} 
-                           href={item.href}  // Fixed: removed quotes around item.href
+                           href={item.href}
                            className='text-foreground/80 hover:text-teal-500 transition-colors duration-300'>
                             {item.name}
                         </a>
                     ))}
                 </div>
                   
-                    
-                  
-                {/*mobile nav*/}
-                
+                {/* Mobile nav */}
                 <button onClick={() => setIsMenuOpen((prev) => !prev )}
                 className='md:hidden p-2 text-foreground z-50'
                 aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
                 >
-                {isMenuOpen ? <X size={24}/> : <Menu size={24} />}{""}
-
-
+                {isMenuOpen ? <X size={24}/> : <Menu size={24} />}
                 </button>
-                <div className={cn('fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center', // Fixed: 'fixed' instead of 'fix'
+                
+                <div className={cn('fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center',
                                   "transition-all duration-300 md:hidden",
                                   isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                                   )}>
@@ -78,5 +74,5 @@ export const Navbar = () => {
                 </div>
             </div>
         </nav>
-    )
+    );
 }

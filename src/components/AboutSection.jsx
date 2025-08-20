@@ -26,7 +26,7 @@ export const AboutSection = () => {
                         <a href = "#contact" className="cosmic-button"> 
                        Get in Touch
                         </a>
-                         <a href = "documents/Peralta_Jaminli_M-Resume_Software_Developer.pdf" 
+                         <a href = "documents/Resume_Peralta_Jaminli_M..pdf" 
                          download="Jaminli_Peralta_Resume.pdf"  
                          className="px-6 py-1 rounded-full border border-teal-500 text-teal-400 hover:bg-teal-500/10 transition-colors duration-300"> 
                         Download CV
