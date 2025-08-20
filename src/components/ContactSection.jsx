@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Facebook, Instagram, Twitter, Send, Linkedin, Github } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram,  Send, Linkedin, Github } from 'lucide-react';
 
 const ContactSection = ({ isDark = true }) => {
   const [formData, setFormData] = useState({
@@ -130,51 +130,61 @@ const ContactSection = ({ isDark = true }) => {
                 </div>
               </div>
 
-              {/* Social Media Card */}
-              <div className={`${isDark ? 'bg-gray-800/30 border-gray-700/50 relative' : 'bg-white border-gray-200'} border rounded-xl p-4 md:p-5 hover:border-teal-500/50 transition-all duration-200`}>
+              {/* Optimized Social Media Card - Reduced DOM elements */}
+              <div className={`${isDark ? 'bg-gray-800/30 border-gray-700/50' : 'bg-white border-gray-200'} border rounded-xl p-4 md:p-5 hover:border-teal-500/50 transition-all duration-200`}>
                 <div className="flex items-center space-x-3 md:space-x-4">
+                  {/* Simplified icon - removed unnecessary wrapper div */}
                   <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-100'} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-500'} rounded`}></div>
+                    {/* Use CSS for the square instead of extra div */}
+                    <span className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-500'} rounded block`}></span>
                   </div>
-                  <div className={`w-10 h-10 md:w-12 md:h-12 ${isDark ? 'bg-teal-500/10' : 'bg-teal-50'} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                    <div className={`w-4 h-4 md:w-5 md:h-5 ${isDark ? 'bg-teal-200' : 'bg-teal-600'} rounded`}></div>
-                  </div>
-                  <div className="flex-1 text-left min-w-0">
-                    <h4 className={`text-base md:text-lg font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h4>
-                    <p className={`text-xs md:text-sm mb-3 md:mb-4 ${isDark ? 'text-white' : 'text-gray-600'}`}>Follow me on social media</p>
-                    <div className="flex flex-wrap gap-2 md:space-x-3 md:gap-0">
+
+                  <div className="flex-1 min-w-0">
+                    <h4 className={`text-base text-left md:text-lg font-semibold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h4>
+                    <p className={`text-xs text-left md:text-sm mb-3 md:mb-4 ${isDark ? 'text-white' : 'text-gray-600'}`}>Follow me on social media</p>
+                    
+                    {/* Simplified social links container */}
+                    <div className="flex gap-2 md:gap-3">
                       <a
                         href="https://www.facebook.com/jaminli.peralta.2024"
                         className={`w-8 h-8 md:w-10 md:h-10 ${isDark ? 'bg-gray-700/50 hover:bg-blue-600' : 'bg-gray-100 hover:bg-blue-600'} rounded-lg flex items-center justify-center transition-all duration-200 group`}
+                        aria-label='Visit my Facebook profile'
                       >
-                        <Facebook size={14} className={`md:hidden ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
-                        <Facebook size={18} className={`hidden md:block ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
+                        {/* Single responsive icon instead of two */}
+                        <Facebook className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white transition-colors`} />
                       </a>
+                      
                       <a
                         href="https://www.instagram.com/jaminnnl/"
                         className={`w-8 h-8 md:w-10 md:h-10 ${isDark ? 'bg-gray-700/50 hover:bg-pink-600' : 'bg-gray-100 hover:bg-pink-600'} rounded-lg flex items-center justify-center transition-all duration-200 group`}
+                        aria-label='Visit my Instagram profile'
                       >
-                        <Instagram size={14} className={`md:hidden ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
-                        <Instagram size={18} className={`hidden md:block ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
+                        <Instagram className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white transition-colors`} />
                       </a>
+                      
                       <a
                         href="https://www.linkedin.com/in/jaminli-peralta-7a18b9323/"
                         className={`w-8 h-8 md:w-10 md:h-10 ${isDark ? 'bg-gray-700/50 hover:bg-blue-400' : 'bg-gray-100 hover:bg-blue-400'} rounded-lg flex items-center justify-center transition-all duration-200 group`}
+                        aria-label='Visit my LinkedIn profile'
                       >
-                        <Linkedin size={14} className={`md:hidden ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
-                        <Linkedin size={18} className={`hidden md:block ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
+                        <Linkedin className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white transition-colors`} />
                       </a>
+                      
                       <a
                         href="https://github.com/jaminnnnnn?tab=repositories"
-                        className={`w-8 h-8 md:w-10 md:h-10 ${isDark ? 'bg-gray-700/50 hover:bg-blue-400' : 'bg-gray-100 hover:bg-blue-400'} rounded-lg flex items-center justify-center transition-all duration-200 group`}
+                        className={`w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center transition-all duration-200 group ${
+                          isDark 
+                            ? 'bg-gray-700/50 hover:bg-gray-400' 
+                            : 'bg-gray-100 hover:bg-gray-400'
+                        }`}
+                        aria-label="Visit my Github profile"
                       >
-                        <Github size={14} className={`md:hidden ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
-                        <Github size={18} className={`hidden md:block ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white`} />
+                        <Github className={`w-3.5 h-3.5 md:w-[18px] md:h-[18px] ${isDark ? 'text-gray-200' : 'text-gray-600'} group-hover:text-white transition-colors`} />
                       </a>
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
             </div>
           </div>
         </div>
