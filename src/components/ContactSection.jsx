@@ -151,7 +151,7 @@ const ContactSection = ({ isDark = true }) => {
              </div>
 
           {/* Contact Information */}
-          <aside className="space-y-4">
+          <aside className=" relative space-y-4">
             {/* Contact Info Cards */}
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
