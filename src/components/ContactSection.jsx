@@ -88,57 +88,67 @@ const ContactSection = ({ isDark = true }) => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start lg:items-end">
           
-          {/* Contact Form */}
+          {/* Left side - Contact Form */}
           <div className="space-y-6 md:space-y-8">
-            <header>
+            <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3 md:mb-4">Get In Touch</h3>
               <div className="w-12 sm:w-16 h-1 bg-teal-500 mb-6 md:mb-8"></div>
               <p className="text-gray-400 mb-6 md:mb-8 text-sm sm:text-base">
                 Let's work together! Send me a message and I'll get back to you as soon as possible.
               </p>
-            </header>
+            </div>
 
-            <div className="space-y-6">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleInputChange}
-                required
-                className={inputClasses}
-              />
+            {/* ✅ Formspree Contact Form */}
+            <form
+              action="https://formspree.io/f/myzpqgzw"  // ← replace with your actual Formspree ID
+              method="POST"
+              className="space-y-6"
+            >
+              <div className="relative">
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  required
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200`}
+                />
+              </div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className={inputClasses}
-              />
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none transition-all duration-200`}
+                />
+              </div>
 
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows={5}
-                value={formData.message}
-                onChange={handleInputChange}
-                required
-                className={`${inputClasses} resize-none`}
-              />
+              <div className="relative">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  className={`w-full ${isDark ? 'bg-gray-800/10 border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'} border rounded-lg py-4 px-4 focus:border-teal-500 ${isDark ? 'focus:bg-gray-800' : 'focus:bg-white'} ${isDark ? 'placeholder-gray-400' : 'placeholder-gray-500'} focus:outline-none resize-none transition-all duration-200`}
+                />
+              </div>
 
               <button
-                type="button"
-                onClick={handleSubmit}
-                className="w-full bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2 group"
+                type="submit"
+                className="w-full bg-teal-500 relative hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 group"
               >
-                <Send size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
+                <Send size={18} className="group-hover:translate-x-1 transition-transform" />
                 Send Message
               </button>
-            </div>
-          </div>
+            </form>
+             </div>
 
           {/* Contact Information */}
           <aside className="space-y-4">
@@ -161,7 +171,7 @@ const ContactSection = ({ isDark = true }) => {
                       }`}>
                         {info.title}
                       </h4>
-                      <p className={`text-xs md:text-sm mb-1 md:mb-2 ${
+                      <p className={`text-xs relative md:text-sm mb-1 md:mb-2 ${
                         isDark ? 'text-gray-300' : 'text-gray-600'
                       }`}>
                         {info.subtitle}
